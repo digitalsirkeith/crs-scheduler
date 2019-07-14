@@ -1,1 +1,1 @@
-web: gunicorn flaskr:app --log-file=-
+web: flask init-db; gunicorn flaskr:app --log-file=-
