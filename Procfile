@@ -1,1 +1,1 @@
-web: flask init-db; gunicorn flaskr:app --log-file=-
+web: flask db migrate && flask db upgrade && gunicorn flaskr:app --log-file=-
