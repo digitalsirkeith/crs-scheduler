@@ -9,8 +9,3 @@ instructor_class_schedule = db.Table('instructor_class_schedule_association',
     db.Column('instructor_id', db.Integer, db.ForeignKey('instructor.id')),
     db.Column('class_schedule_id', db.Integer, db.ForeignKey('class_schedule.id'))
 )
-
-block_class_schedule = db.Table('block_class_schedule_association',
-    db.Column('block_id', db.Integer, db.ForeignKey('block.id')),
-    db.Column('class_schedule_id', db.Integer, db.ForeignKey('class_schedule.id'))
-)

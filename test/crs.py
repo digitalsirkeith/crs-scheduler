@@ -211,8 +211,9 @@ for i in range(ord('A'), (ord('Z') + 1)):
     print("Scraping page " + (chr(i)))
 
     req = Request(url, headers = {'User-Agent': 'Mozilla/5.0'})
-
-    html = urlopen(req).read()
+    import ssl
+    g = ssl.SSLContext()
+    html = urlopen(req, context=g).read()
 
     soup = bs.BeautifulSoup(html, "html.parser")
 
